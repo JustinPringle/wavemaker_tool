@@ -1,0 +1,19 @@
+[project]
+name = "wavemaker"
+version = "0.1.0"
+description = "First-order wave generation for the EFML concrete wave tank"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+wavemaker = "wavemaker.cli:main"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["wavemaker"]
